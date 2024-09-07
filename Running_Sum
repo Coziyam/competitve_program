@@ -1,0 +1,14 @@
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        arr = []
+        i = 0
+        
+        
+        for i in range(len(nums)):
+            j = len(arr)-1
+            if j < 0:
+                arr.append(nums[i])
+            else:
+                arr.append(nums[i] + arr[j])
+            i+=1
+        return arr
